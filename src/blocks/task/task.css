@@ -1,0 +1,15 @@
+.task {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 2px 15px;
+  position: relative;
+  /* box-shadow: 0 0 5px #FFF; */
+  background-color: #444;
+  border-bottom: 1px solid yellow;
+  border-left: 1px solid yellow;
+  border-right: 1px solid yellow;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}

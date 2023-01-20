@@ -1,0 +1,23 @@
+.task__remove-button {
+  position: absolute;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  padding: 0;
+  background-color: #A22;
+  color: #FFF;
+  border: none;
+  /* border-radius: 0 10px 10px 0; */
+}
+
+.task__remove-button:first-of-type {
+  border-radius: 0 10px 10px 0;
+}
+
+.task__remove-button:hover {
+  background-color: #D22;
+}
+
+.task__remove-button:active {
+  background-color: #B22;
+}

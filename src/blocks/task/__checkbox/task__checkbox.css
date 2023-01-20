@@ -1,0 +1,6 @@
+.task__checkbox {
+  /* margin-right: 18px; */
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}

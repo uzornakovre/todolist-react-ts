@@ -1,0 +1,11 @@
+.taskslist {
+  margin: 30px auto 0;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  min-height: 320px;
+  position: relative;
+  box-shadow: 0 0 5px #FFF;
+  border-radius: 10px;
+  background-color: #022;
+}
