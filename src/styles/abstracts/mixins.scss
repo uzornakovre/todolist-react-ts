@@ -1,0 +1,13 @@
+@mixin use-default-font(
+  $family: $font-family-default,
+  $weight: 400,
+  $size: $font-size-text,
+  $line-height: $font-line-height-text,
+  $color: $color-text-1
+) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}

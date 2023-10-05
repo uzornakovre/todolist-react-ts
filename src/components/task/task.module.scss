@@ -1,0 +1,95 @@
+@import "../../styles/index.scss";
+
+.task {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 50px;
+  padding: 2px 15px;
+  position: relative;
+  background-color: $color-background-6;
+  border: 1px solid $color-background-1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.content {
+  padding: 14px 30% 13px 55px;
+  width: 65%;
+  margin: 0;
+  word-wrap: normal;
+  align-self: center;
+  vertical-align: center;
+  position: relative;
+
+  @media screen and (max-width: 570px) {
+    padding-left: 15%;
+  }
+}
+
+.content::before {
+  position: absolute;
+  left: -15px;
+  top: -2px;
+  width: 50px;
+  height: 100%;
+  content: "";
+  display: block;
+  background-color: rgb(48, 48, 41);
+  border: 2px solid #060;
+  border-radius: 10px 0 0 10px;
+  transition: background-color 0.2s linear;
+}
+
+.content:hover::before {
+  background-color: $color-additional-3;
+}
+
+.checkbox:checked + .content::before {
+  background-image: url("../../images/checked.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $color-additional-2;
+  border-color: $color-additional-3;
+}
+
+.checkbox:checked + .content:hover::before {
+  background-color: $color-additional-5;
+  border-color: $color-additional-4;
+}
+
+.checkbox:checked + .content {
+  text-decoration: line-through;
+}
+
+.remove_button {
+  position: absolute;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  padding: 0;
+  background-color: $color-button-2;
+  color: $color-text-1;
+  border: none;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.remove_button:first-of-type {
+  border-radius: 0 10px 10px 0;
+}
+
+.remove_button:hover {
+  background-color: $color-button-hover-2;
+}
+
+.remove_button:active {
+  background-color: #b22;
+}

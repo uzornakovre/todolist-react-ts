@@ -1,11 +1,13 @@
-.taskslist {
+@import "../../styles/index.scss";
+
+.task_list {
   margin: 30px auto 0;
   list-style: none;
   padding: 0;
   width: 100%;
   min-height: 320px;
   position: relative;
-  box-shadow: 0 0 5px #FFF;
+  box-shadow: 0 0 5px $color-text-1;
   border-radius: 10px;
-  background-color: #022;
+  background-color: $color-background-5;
 }
