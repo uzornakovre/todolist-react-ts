@@ -23,7 +23,11 @@ const NewTask: FC<TNewTaskProps> = ({ createTask }) => {
         onChange={handleChange}
         value={inputValue || ""}
       ></input>
-      <button className={styles.submit} type="submit">
+      <button
+        className={styles.submit}
+        type="submit"
+        disabled={inputValue === ""}
+      >
         Добавить
       </button>
     </form>

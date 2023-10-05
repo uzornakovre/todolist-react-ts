@@ -18,15 +18,15 @@
   border-radius: 10px;
   background-color: $color-background-2;
   border: none;
-}
 
-.input::placeholder {
-  color: $color-text-1;
-}
+  &::placeholder {
+    color: $color-text-1;
+  }
 
-.input:focus {
-  outline: none;
-  box-shadow: 0 0 5px $color-additional-1;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px $color-additional-1;
+  }
 }
 
 .submit {
@@ -41,12 +41,18 @@
   border-radius: 0 10px 10px 0;
   transition: all 0.2s linear;
   cursor: pointer;
-}
 
-.submit:hover {
-  background-color: $color-background-3;
-}
+  &:hover {
+    background-color: $color-background-3;
+  }
 
-.submit:active {
-  background-color: $color-background-4;
+  &:active {
+    background-color: $color-background-4;
+  }
+
+  &:disabled {
+    width: 0;
+    font-size: 0;
+    color: transparent;
+  }
 }
