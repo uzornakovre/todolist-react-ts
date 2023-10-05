@@ -1,9 +1,16 @@
 import styles from "./task.module.scss";
+import { useAppDispatch } from "../../services/hooks";
+import {
+  removeTask,
+  toggleTask,
+} from "../../services/task-list/task-list-slice";
 import { FC } from "react";
 
-const Task: FC<TTaskProps> = ({ content, id, toggleTask, removeTask }) => {
+const Task: FC<TTaskProps> = ({ content, id }) => {
+  const dispatch = useAppDispatch();
+
   function handleRemoveClick() {
-    removeTask(id);
+    dispatch(removeTask(id));
   }
 
   function handleTaskClick() {

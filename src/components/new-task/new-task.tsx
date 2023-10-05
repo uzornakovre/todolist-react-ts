@@ -1,12 +1,15 @@
 import styles from "./new-task.module.scss";
-import { ChangeEvent, FC, FormEvent, useState } from "react";
+import { useAppDispatch } from "../../services/hooks";
+import { createTask } from "../../services/task-list/task-list-slice";
+import { ChangeEvent, FormEvent, useState } from "react";
 
-const NewTask: FC<TNewTaskProps> = ({ createTask }) => {
+const NewTask = () => {
+  const dispatch = useAppDispatch();
   const [inputValue, setInputValue] = useState("");
 
   function handleSubmit(evt: FormEvent<HTMLFormElement>): void {
     evt.preventDefault();
-    createTask(inputValue);
+    dispatch(createTask(inputValue));
     setInputValue("");
   }
 
