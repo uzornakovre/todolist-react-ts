@@ -6,7 +6,10 @@ function TasksList () {
     <ul className='taskslist'>
       <li className='taskslist__item'>
         <Task />
-
+        <Task />
+        <Task />
+        <Task />
+        <Task />
       </li>
     </ul>
   );
