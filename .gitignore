@@ -20,7 +20,7 @@ node_modules
 /coverage
 
 # production
-/frontend/build
+/build
 
 # misc
 .env

@@ -1,6 +1,8 @@
 {
-  "name": "my-app",
+  "name": "todolist-react-ts",
   "version": "0.1.0",
+  "homepage": "https://uzornakovre.github.io/todolist-react-ts",
+  "author": "Konstantin Filyaev",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
