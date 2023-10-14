@@ -33,10 +33,10 @@ const taskListSlice = createSlice({
         allTasks: state.allTasks.filter((task) => task.id !== action.payload),
       };
     },
-    removeAllTasks: (state) => {
+    removeCompletedTasks: (state) => {
       return {
         ...state,
-        allTasks: initialState.allTasks,
+        allTasks: state.allTasks.filter((t) => !t.isComplete),
       };
     },
     toggleTask: (state, action: PayloadAction<string>) => {
@@ -67,7 +67,7 @@ const taskListSlice = createSlice({
 export const {
   createTask,
   removeTask,
-  removeAllTasks,
+  removeCompletedTasks,
   toggleTask,
   toggleShowMode,
 } = taskListSlice.actions;

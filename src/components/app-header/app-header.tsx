@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from "../../services/hooks";
 import { getAllTasks } from "../../services/task-list/task-list-selectors";
-import { removeAllTasks } from "../../services/task-list/task-list-slice";
+import { removeCompletedTasks } from "../../services/task-list/task-list-slice";
 import styles from "./app-header.module.scss";
 import FilterOptions from "./filter/filter-options";
 
@@ -8,7 +8,7 @@ const AppHeader = () => {
   const dispatch = useAppDispatch();
   const allTasks = useAppSelector(getAllTasks);
   function handleRemoveButtonClick() {
-    dispatch(removeAllTasks());
+    dispatch(removeCompletedTasks());
   }
   return (
     <header className={styles.header}>
@@ -20,7 +20,7 @@ const AppHeader = () => {
         onClick={handleRemoveButtonClick}
         disabled={!allTasks.length}
       >
-        Удалить&nbsp;все
+        Удалить&nbsp;выполненные
       </button>
     </header>
   );
