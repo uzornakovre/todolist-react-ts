@@ -11,3 +11,17 @@
   line-height: $line-height;
   color: $color;
 }
+
+@mixin use-heading-font(
+  $family: $font-family-default,
+  $weight: 700,
+  $size: $font-size-heading,
+  $line-height: $font-line-height-heading,
+  $color: $color-text-1
+) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
