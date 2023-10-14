@@ -11,6 +11,8 @@
   box-shadow: 0 0 5px $color-text-1;
   border-radius: 10px;
   overflow: hidden;
+
+  @include use-default-font($size: $font-size-text-s);
 }
 
 .option {
