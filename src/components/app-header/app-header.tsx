@@ -18,7 +18,7 @@ const AppHeader = () => {
         className={styles.remove_button}
         type="button"
         onClick={handleRemoveButtonClick}
-        disabled={!allTasks.length}
+        disabled={!allTasks.some((t) => t.isComplete)}
       >
         Удалить&nbsp;выполненные
       </button>
