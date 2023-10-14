@@ -1,18 +1,17 @@
 import styles from "./filter-options.module.scss";
-import { useEffect, useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../../services/hooks";
+import { getShowMode } from "../../../services/task-list/task-list-selectors";
+import { toggleShowMode } from "../../../services/task-list/task-list-slice";
+import { ChangeEvent } from "react";
+import { filterOptions } from "../../../utils/constants";
 
 const FilterOptions = () => {
-  const [currentValue, setCurrentValue] = useState("all");
+  const dispatch = useAppDispatch();
+  const showMode = useAppSelector(getShowMode);
 
-  const filterOptions = [
-    { name: "Все", value: "all" },
-    { name: "Выполненные", value: "done" },
-    { name: "Текущие", value: "current" },
-  ];
-
-  useEffect(() => {
-    console.log(currentValue);
-  }, [currentValue]);
+  function handleFilterOptionChange(evt: ChangeEvent<HTMLInputElement>) {
+    dispatch(toggleShowMode(evt.target.value as TShowMode));
+  }
 
   return (
     <ul className={styles.filter_options}>
@@ -24,8 +23,8 @@ const FilterOptions = () => {
             id={`show_${option.value}`}
             name="filter"
             value={option.value}
-            onChange={(evt) => setCurrentValue(evt.target.value)}
-            checked={currentValue === option.value}
+            onChange={handleFilterOptionChange}
+            checked={showMode === option.value}
           />
           <label className={styles.label} htmlFor={`show_${option.value}`}>
             {option.name}

@@ -2,10 +2,12 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface ITaskListState {
   allTasks: Array<TTask>;
+  showMode: TShowMode;
 }
 
 export const initialState: ITaskListState = {
   allTasks: [],
+  showMode: "all",
 };
 
 const taskListSlice = createSlice({
@@ -19,7 +21,7 @@ const taskListSlice = createSlice({
           {
             id: crypto.randomUUID(),
             value: action.payload,
-            complete: false,
+            isComplete: false,
           },
           ...state.allTasks,
         ],
@@ -38,6 +40,7 @@ const taskListSlice = createSlice({
       };
     },
     toggleTask: (state, action: PayloadAction<string>) => {
+      console.log("test");
       return {
         ...state,
         allTasks: [
@@ -45,17 +48,28 @@ const taskListSlice = createSlice({
             if (task.id === action.payload) {
               return {
                 ...task,
-                complete: !task.complete,
+                isComplete: !task.isComplete,
               };
             } else return { ...task };
           }),
         ],
       };
     },
+    toggleShowMode: (state, action: PayloadAction<TShowMode>) => {
+      return {
+        ...state,
+        showMode: action.payload,
+      };
+    },
   },
 });
 
-export const { createTask, removeTask, removeAllTasks, toggleTask } =
-  taskListSlice.actions;
+export const {
+  createTask,
+  removeTask,
+  removeAllTasks,
+  toggleTask,
+  toggleShowMode,
+} = taskListSlice.actions;
 
 export default taskListSlice.reducer;

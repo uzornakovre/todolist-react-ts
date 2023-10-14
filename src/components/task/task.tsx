@@ -6,7 +6,7 @@ import {
 } from "../../services/task-list/task-list-slice";
 import { FC } from "react";
 
-const Task: FC<TTaskProps> = ({ content, id }) => {
+const Task: FC<TTaskProps> = ({ content, id, isComplete }) => {
   const dispatch = useAppDispatch();
 
   function handleRemoveClick() {
@@ -14,7 +14,7 @@ const Task: FC<TTaskProps> = ({ content, id }) => {
   }
 
   function handleTaskClick() {
-    toggleTask(id);
+    dispatch(toggleTask(id));
   }
 
   return (
@@ -25,6 +25,7 @@ const Task: FC<TTaskProps> = ({ content, id }) => {
         name="taskcheck"
         id={id}
         onChange={handleTaskClick}
+        checked={isComplete}
       ></input>
       <label className={styles.content} htmlFor={id}>
         {content}

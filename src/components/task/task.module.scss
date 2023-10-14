@@ -27,13 +27,8 @@
     border-color: $color-additional-3;
   }
 
-  &:checked + .content:hover::before {
-    background-color: $color-additional-5;
-    border-color: $color-additional-4;
-  }
-
-  &:checked + .content {
-    text-decoration: line-through;
+  & + .content:hover::before {
+    opacity: 0.7;
   }
 }
 
