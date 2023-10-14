@@ -13,6 +13,11 @@
   overflow: hidden;
 
   @include use-default-font($size: $font-size-text-s);
+
+  @media screen and (max-width: calc($screen-width-tablet - 1px)) {
+    grid-template-columns: 30% 40% 30%;
+    font-size: $font-size-text-xs;
+  }
 }
 
 .option {

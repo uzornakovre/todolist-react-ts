@@ -88,4 +88,8 @@
   &:active {
     background-color: #b22;
   }
+
+  @media screen and (max-width: calc($screen-width-tablet - 1px)) {
+    font-size: $font-size-text-xs;
+  }
 }
