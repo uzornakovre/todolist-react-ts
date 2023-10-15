@@ -9,7 +9,7 @@ const FilterOptions = () => {
   const dispatch = useAppDispatch();
   const showMode = useAppSelector(getShowMode);
 
-  function handleFilterOptionChange(evt: ChangeEvent<HTMLInputElement>) {
+  function handleFilterOptionChange(evt: ChangeEvent<HTMLInputElement>): void {
     dispatch(toggleShowMode(evt.target.value as TShowMode));
   }
 

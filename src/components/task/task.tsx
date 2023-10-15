@@ -6,14 +6,20 @@ import {
 } from "../../services/task-list/task-list-slice";
 import { FC } from "react";
 
-const Task: FC<TTaskProps> = ({ content, id, isComplete }) => {
+interface ITaskProps {
+  content: string;
+  id: string;
+  isComplete: boolean;
+}
+
+const Task: FC<ITaskProps> = ({ content, id, isComplete }) => {
   const dispatch = useAppDispatch();
 
-  function handleRemoveClick() {
+  function handleRemoveClick(): void {
     dispatch(removeTask(id));
   }
 
-  function handleTaskClick() {
+  function handleTaskClick(): void {
     dispatch(toggleTask(id));
   }
 
