@@ -36,7 +36,7 @@
   padding: 14px 30% 13px 55px;
   width: 65%;
   margin: 0;
-  word-wrap: normal;
+  word-wrap: break-word;
   align-self: center;
   vertical-align: center;
   position: relative;
@@ -58,10 +58,15 @@
     &:hover::before {
       background-color: $color-additional-3;
     }
+
+    @media screen and (max-width: calc($screen-width-tablet - 1px)) {
+      width: 30px;
+    }
   }
 
-  @media screen and (max-width: 570px) {
-    padding-left: 15%;
+  @media screen and (max-width: calc($screen-width-tablet - 1px)) {
+    font-size: $font-size-text-s;
+    padding-left: 25px;
   }
 }
 
@@ -90,6 +95,7 @@
   }
 
   @media screen and (max-width: calc($screen-width-tablet - 1px)) {
+    width: 17%;
     font-size: $font-size-text-xs;
   }
 }

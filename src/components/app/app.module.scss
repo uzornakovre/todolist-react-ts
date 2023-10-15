@@ -13,6 +13,7 @@
   box-sizing: border-box;
   max-width: 880px;
   min-height: 400px;
+  height: calc(100vh - 140px);
   margin: 20px auto;
   padding: 15px;
   background-color: $color-background-3;
@@ -22,5 +23,14 @@
 
   @media screen and (max-width: calc($screen-width-desktop-s - 1px)) {
     width: 96%;
+  }
+
+  @media screen and (max-width: calc($screen-width-tablet - 1px)) {
+    height: calc(100vh - 170px);
+  }
+
+  @media screen and (max-width: calc($screen-width-mobile - 1px)) {
+    min-height: 10px;
+    height: calc(100vh - 200px);
   }
 }
