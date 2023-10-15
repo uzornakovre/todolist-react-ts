@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/todolist-react-ts/static/css/main.e06716e2.css",
-    "main.js": "/todolist-react-ts/static/js/main.80d24ec2.js",
+    "main.css": "/todolist-react-ts/static/css/main.0df1dc2e.css",
+    "main.js": "/todolist-react-ts/static/js/main.ec53ca78.js",
     "static/js/787.8fc8dc0a.chunk.js": "/todolist-react-ts/static/js/787.8fc8dc0a.chunk.js",
     "static/media/Inter-Medium.woff": "/todolist-react-ts/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/todolist-react-ts/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -10,12 +10,12 @@
     "static/media/Inter-Black.woff2": "/todolist-react-ts/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
     "static/media/Inter-Regular.woff2": "/todolist-react-ts/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
     "index.html": "/todolist-react-ts/index.html",
-    "main.e06716e2.css.map": "/todolist-react-ts/static/css/main.e06716e2.css.map",
-    "main.80d24ec2.js.map": "/todolist-react-ts/static/js/main.80d24ec2.js.map",
+    "main.0df1dc2e.css.map": "/todolist-react-ts/static/css/main.0df1dc2e.css.map",
+    "main.ec53ca78.js.map": "/todolist-react-ts/static/js/main.ec53ca78.js.map",
     "787.8fc8dc0a.chunk.js.map": "/todolist-react-ts/static/js/787.8fc8dc0a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e06716e2.css",
-    "static/js/main.80d24ec2.js"
+    "static/css/main.0df1dc2e.css",
+    "static/js/main.ec53ca78.js"
   ]
 }
